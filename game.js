@@ -1,0 +1,86 @@
+
+
+
+/* score declarations */
+let humanScore = 0;
+let computerScore = 0;
+
+
+
+/* getting computer choice*/
+function getComputerChoice(){
+    let randomNum = Math.random();
+    if (randomNum < 0.333333333){
+        return "Paper";
+    } else if (randomNum < 0.666666666){
+        return "Scissors";
+    }else {
+        return "Rock";
+    }
+}
+
+
+
+/* getting human choice*/
+function getHumanChoice(){
+    let choice = prompt("Enter your choice (paper,rock,scissors) :").toLowerCase();
+    if (choice === "paper"){
+        return "Paper";
+    } else if (choice === "scissors"){
+        return "Scissors";
+    }else if (choice === "rock"){
+        return "Rock";
+    }
+
+      }
+
+
+      
+/* playing a single round*/      
+function playRound(computerChoice,humanChoice) {
+  
+    if (computerChoice === humanChoice) {
+        return `tie! you both chose ${computerChoice}`
+    }else if (computerChoice === "Rock" && humanChoice === "Paper") { 
+        humanScore += 1
+        return `you win! ${humanChoice} beats ${computerChoice}`
+    }else if (computerChoice === "Rock" && humanChoice === "Scissors") { 
+        computerScore += 1
+        return `you lose! ${computerChoice} beats ${humanChoice}`
+    }else if (computerChoice === "Paper" && humanChoice === "Scissors") { 
+        humanScore += 1
+        return `you win! ${humanChoice} beats ${computerChoice}`
+    }else if (computerChoice === "Paper" && humanChoice === "Rock") { 
+        computerScore += 1
+        return `you lose! ${computerChoice} beats ${humanChoice}`
+    }else if (computerChoice === "Scissors" && humanChoice === "Rock") { 
+        humanScore += 1
+        return `you win! ${humanChoice} beats ${computerChoice}`
+    }else if (computerChoice === "Scissors" && humanChoice === "Paper") { 
+        computerScore += 1
+        return `you lose! ${computerChoice} beats ${humanChoice}`
+    }
+    
+
+
+    
+}
+
+/* playing the whole game (5 rounds) and declaring the winner*/ 
+function playGame(){
+    for (i=0 ;i<5;i++) {
+        alert(`game ${i+1}:\n ` + playRound(getComputerChoice(),getHumanChoice()) + `\n score: computer:${computerScore} human:${humanScore}`)
+        
+    }
+    if (computerScore === humanScore) {
+        alert(`final score:${computerScore}:${humanScore} game ends in a tie!`)
+    }else if (computerScore > humanScore) {
+        alert(`final score:${computerScore}:${humanScore} computer wins!`)
+    }else if (computerScore < humanScore) {
+        alert(`final score:${computerScore}:${humanScore} human wins!`)
+    }
+}
+
+
+/* trigger the game*/ 
+playGame()
