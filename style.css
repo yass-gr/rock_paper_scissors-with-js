@@ -1,0 +1,158 @@
+:root{
+    font-family: 'gay' ,sans-serif;
+    box-sizing: border-box;
+}
+@font-face  {
+    font-family: 'gay';
+    src: url(ByteBounce.ttf);
+    font-weight: normal;  
+    font-style: normal; 
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #0D0D0D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    border: 2PX solid #F2E399;
+    width: 20rem;
+    height: 30rem ;
+    background-color: #F2AEDB;
+    border-radius: 25PX;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10PX rgba(0, 0, 0, 0.022);
+    align-items: center;
+}
+.current-game{
+    color: #F2E399;
+    margin-block: 20PX;
+    font-size: 30px;
+    text-align: center;
+    width: 16rem;
+    background-color: black;
+    border-radius: 10PX;
+   
+}
+
+.human-choices > button {
+    background: transparent;
+    border:3px solid #000000;
+    border-radius: 25px;
+    color: #000000;
+    width: 5rem;
+    height: 2rem;
+    margin: 5px;
+    box-shadow: 0 0 10PX rgba(0, 0, 0, 0.147);
+    font-family: 'gay';
+    font-size: 20PX;
+    font-weight: bold;
+    transition:  all 0.2s ;
+}
+.human-choices > button:hover{
+    background-color: #F2E399;
+}
+.human-choices{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.info{
+    background-color: #F2E399;
+    width: 16rem;
+    height: 15rem;
+    border: 3PX SOLID#F2778D;
+    box-shadow: 0 0 10PX rgba(0, 0, 0, 0.147);
+    
+    box-sizing: border-box;
+    border-radius: 10PX;
+}
+h1{
+    text-align: center;
+    margin-block: 1rem;
+    color: #F2778D;
+}
+.titles {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+.spn5,.spn6{
+    color: #F2220F;
+    background-color: ;
+    font-size: 25px;
+    width: 7rem;
+    text-align: center;
+}
+.scores{
+   display: flex;
+    justify-content: center;
+    gap: 1rem; 
+}
+.scoree{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+.human{
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+}
+.pc{
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-right: 10PX;
+}
+.spn1,.spn2,.spn3,.spn4{
+    margin: 1rem;
+    font-size: 30px;
+}
+#reset{
+    background-color: #f2220f59;
+    color: #f2220f93;
+    width: 16rem;
+    margin-top: 10PX;
+    height: 3rem;
+    margin-bottom: 1rem;
+    
+    border:3px solid #F2778D;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.2s ;
+    border-radius: 10PX;
+}
+#reset:hover{
+    background-color: #000000;
+    color: white;
+}
+.spn3,.spn4{
+    width: 5rem;
+    font-size: 25PX;
+    text-align: center;
+}
+.imgs{
+    display: flex;
+    gap: 3rem;
+    
+    width: 16rem;
+    justify-content: center;
+
+}
+.rock{
+    width: 45px;
+}
+.paper{
+    width: 37px;
+}
+.scissors{
+    width: 50px;
+}
